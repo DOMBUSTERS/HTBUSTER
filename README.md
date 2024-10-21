@@ -18,3 +18,4 @@
 4. Set the `HTB_TOKEN` environment variable with the value containing your generated token
 5. Run styx
 
+-OR- clone this repo and run `go build`
