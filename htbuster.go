@@ -15,8 +15,8 @@ import (
 	"github.com/fstanis/screenresolution"
 )
 
-var possibleVPN = []string{"Release Arena", "VIP", "VIP+", "Free"}
-var possibleRegions = []string{"us", "eu", "sg", "au"}
+var possibleVPN = []string{"Release Arena", "Free"}
+var possibleRegions = []string{"us", "eu"}
 var (
 	sashPos1 float32 = 200
 	sashPos2 float32 = 200
