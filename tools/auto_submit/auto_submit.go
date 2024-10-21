@@ -5,9 +5,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/c3l3si4n/styx/api"
-	"github.com/c3l3si4n/styx/config"
-	"github.com/c3l3si4n/styx/utils"
+	"github.com/DOMBUSTERS/HTBUSTER/api"
+	"github.com/DOMBUSTERS/HTBUSTER/config"
+	"github.com/DOMBUSTERS/HTBUSTER/utils"
 )
 
 func isValidHex(s string) bool {

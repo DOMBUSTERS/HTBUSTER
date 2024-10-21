@@ -5,11 +5,11 @@ import (
 	"log"
 	"os"
 
-	"github.com/c3l3si4n/styx/api"
-	"github.com/c3l3si4n/styx/config"
-	autosubmit "github.com/c3l3si4n/styx/tools/auto_submit"
-	"github.com/c3l3si4n/styx/tools/bingo"
-	"github.com/c3l3si4n/styx/utils"
+	"github.com/DOMBUSTERS/HTBUSTER/api"
+	"github.com/DOMBUSTERS/HTBUSTER/config"
+	autosubmit "github.com/DOMBUSTERS/HTBUSTER/tools/auto_submit"
+	"github.com/DOMBUSTERS/HTBUSTER/tools/bingo"
+	"github.com/DOMBUSTERS/HTBUSTER/utils"
 
 	g "github.com/AllenDang/giu"
 	"github.com/fstanis/screenresolution"

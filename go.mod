@@ -1,4 +1,4 @@
-module github.com/c3l3si4n/styx
+module github.com/DOMBUSTERS/HTBUSTER
 
 go 1.22
 

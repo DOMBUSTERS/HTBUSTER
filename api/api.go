@@ -16,7 +16,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/c3l3si4n/styx/config"
+	"github.com/DOMBUSTERS/HTBUSTER/config"
 )
 
 var PollQueue = make(chan int, 1)
