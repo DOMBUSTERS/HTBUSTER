@@ -74,5 +74,5 @@ func Bingo() {
 	go func() {
 		http.ListenAndServe("0.0.0.0:1338", nil)
 	}()
-	fmt.Println("Server started at http://0.0.0.0:61234")
+	fmt.Println("Server started at http://0.0.0.0:1338")
 }
