@@ -177,18 +177,18 @@ func drawToolsTab() g.Layout {
 			layout = append(layout, g.Label(fmt.Sprintf("HTB IP: %s", ipAddress)))
 
 			layout = append(layout, g.Row(g.Layout{
-				g.Label(fmt.Sprintf("Linux: http://%s:61234/lin", ipAddress)),
+				g.Label(fmt.Sprintf("Linux: http://%s:1338/lin", ipAddress)),
 				g.Button("Copy"),
 				g.Event().OnClick(g.MouseButtonLeft, func() {
-					utils.SetClipboard(fmt.Sprintf("http://%s:61234/lin", ipAddress))
+					utils.SetClipboard(fmt.Sprintf("http://%s:1338/lin", ipAddress))
 				}),
 			}))
 			layout = append(layout, g.Row(
 				g.Layout{
-					g.Label(fmt.Sprintf("Windows: http://%s:61234/win", ipAddress)),
+					g.Label(fmt.Sprintf("Windows: http://%s:1338/win", ipAddress)),
 					g.Button("Copy"),
 					g.Event().OnClick(g.MouseButtonLeft, func() {
-						utils.SetClipboard(fmt.Sprintf("http://%s:61234/win", ipAddress))
+						utils.SetClipboard(fmt.Sprintf("http://%s:1338/win", ipAddress))
 					}),
 				},
 			))
