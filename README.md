@@ -1,6 +1,7 @@
 
 # HTBUSTER
  HTBUSTER is a utility for the Dombusters team to use for HackTheBox. It draws heavy inspiration, and is built based on [Celesian's Styx tool](https://github.com/c3l3si4n/styx)   
+ (Currently just copied, changes are intended!)
   
  ## Purpose
  HTBUSTER was built for the sole purpose of levelling the playing field during HTB seasons. With the speed at which the usual few complete easy machines, we need to save seconds where ever we can.
