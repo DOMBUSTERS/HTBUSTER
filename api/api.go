@@ -317,32 +317,6 @@ func FindVPNServer(region, listingType string, machineType string) int {
 
 		}
 		return lowestClientsId
-	} else if machineType == "VIP" {
-		// get keys
-		lowestClients := 0
-		lowestClientsId := 0
-		for key, server := range servers {
-			serverClients := int(server.(map[string]interface{})["current_clients"].(float64))
-			if lowestClients == 0 || serverClients < lowestClients {
-				lowestClients = serverClients
-				lowestClientsId, _ = strconv.Atoi(key)
-			}
-
-		}
-		return lowestClientsId
-	} else if machineType == "VIP+" {
-		// get keys
-		lowestClients := 0
-		lowestClientsId := 0
-		for key, server := range servers {
-			serverClients := int(server.(map[string]interface{})["current_clients"].(float64))
-			if lowestClients == 0 || serverClients < lowestClients {
-				lowestClients = serverClients
-				lowestClientsId, _ = strconv.Atoi(key)
-			}
-
-		}
-		return lowestClientsId
 	}
 	return 0
 }
