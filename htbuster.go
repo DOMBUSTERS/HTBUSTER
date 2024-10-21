@@ -15,8 +15,8 @@ import (
 	"github.com/fstanis/screenresolution"
 )
 
-var possibleVPN = []string{"Release Arena", "Free"}
-var possibleRegions = []string{"us", "eu"}
+var possibleVPN = []string{"Release Arena", "VIP", "VIP+", "Free"}
+var possibleRegions = []string{"us", "eu", "sg", "au"}
 var (
 	sashPos1 float32 = 200
 	sashPos2 float32 = 200
@@ -204,7 +204,7 @@ func drawLayout() g.Layout {
 	initialLayout := g.Layout{}
 	initialLayout = append(initialLayout,
 		g.Row(
-			g.Label("Styx HTB GUI v0.0.1"),
+			g.Label("HTBUSTER"),
 			g.Button("Machine"),
 			g.Event().OnClick(g.MouseButtonLeft, func() {
 				config.SelectedTab = 0
@@ -260,6 +260,6 @@ func main() {
 	go api.HydrateMachineDetails()
 	go api.PollMachineDetails()
 	autosubmit.StartSubmitter()
-	wnd := g.NewMasterWindow("Styx", 800, resolution.Height/2, g.MasterWindowFlagsNotResizable)
+	wnd := g.NewMasterWindow("HTBUSTER", 800, resolution.Height/2, g.MasterWindowFlagsNotResizable)
 	wnd.Run(loop)
 }
