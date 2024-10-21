@@ -6,6 +6,10 @@
  HTBUSTER was built for the sole purpose of levelling the playing field during HTB seasons. With the speed at which the usual few complete easy machines, we need to save seconds where ever we can.
  To save reinventing the wheel, Celesian's tool was cloned and modified to better suit our use cases.
 
+ ##
+ HTBUSTER will be further built on to bring new features and enhancements to the team. 
+ 
+ 
 ## Usage
 1. `sudo apt install -y libxcursor-dev libxrandr-dev libxinerama-dev libxi-dev libxxf86vm-dev`
 2. `go install github.com/DOMBUSTERS/HTBUSTER@HEAD`
