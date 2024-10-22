@@ -230,7 +230,7 @@ func getMachineURL(action, machineType string) string {
 	switch action {
 	case "start":
 		if machineType == "seasonal" {
-			return fmt.Sprintf("%sapi/v4/arena/start", API_URL)
+			return fmt.Sprintf("%sapi/v4/vm/spawn", API_URL)
 		}
 		if config.MachineAPIType == "machine" {
 			return fmt.Sprintf("%sapi/v4/machine/start", API_URL)
@@ -238,7 +238,7 @@ func getMachineURL(action, machineType string) string {
 		return fmt.Sprintf("%sapi/v4/vm/spawn", API_URL)
 	case "stop":
 		if machineType == "seasonal" {
-			return fmt.Sprintf("%sapi/v4/arena/stop", API_URL)
+			return fmt.Sprintf("%sapi/v4/vm/terminate", API_URL)
 		}
 		if config.MachineAPIType == "machine" {
 			return fmt.Sprintf("%sapi/v4/machine/stop", API_URL)
