@@ -5,15 +5,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
 	"os/exec"
-	"syscall"
-
 	"strconv"
 	"strings"
+	"syscall"
 	"time"
 
 	"github.com/DOMBUSTERS/HTBUSTER/config"
@@ -39,7 +37,7 @@ func makeRequest(method, url, body string, headers map[string]string) (string, e
 	}
 	defer resp.Body.Close()
 
-	bodyBytes, err := ioutil.ReadAll(resp.Body)
+	bodyBytes, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return "", err
 	}
