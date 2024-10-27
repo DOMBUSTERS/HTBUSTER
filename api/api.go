@@ -5,15 +5,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
 	"os/exec"
-	"syscall"
-
 	"strconv"
 	"strings"
+	"syscall"
 	"time"
 
 	"github.com/DOMBUSTERS/HTBUSTER/config"
@@ -39,7 +37,7 @@ func makeRequest(method, url, body string, headers map[string]string) (string, e
 	}
 	defer resp.Body.Close()
 
-	bodyBytes, err := ioutil.ReadAll(resp.Body)
+	bodyBytes, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return "", err
 	}
@@ -141,11 +139,7 @@ func SubmitFlag(flag string, machineId int, machineType string) bool {
 		return false
 	}
 	fmt.Println(response)
-	if strings.Contains(response, "is now owned.") {
-		return true
-	}
-	return false
-
+	return strings.Contains(response, "is now owned.")
 }
 
 type SpawnMachineRequest struct {
@@ -230,7 +224,7 @@ func getMachineURL(action, machineType string) string {
 	switch action {
 	case "start":
 		if machineType == "seasonal" {
-			return fmt.Sprintf("%sapi/v4/arena/start", API_URL)
+			return fmt.Sprintf("%sapi/v4/vm/spawn", API_URL)
 		}
 		if config.MachineAPIType == "machine" {
 			return fmt.Sprintf("%sapi/v4/machine/start", API_URL)
@@ -238,7 +232,7 @@ func getMachineURL(action, machineType string) string {
 		return fmt.Sprintf("%sapi/v4/vm/spawn", API_URL)
 	case "stop":
 		if machineType == "seasonal" {
-			return fmt.Sprintf("%sapi/v4/arena/stop", API_URL)
+			return fmt.Sprintf("%sapi/v4/vm/terminate", API_URL)
 		}
 		if config.MachineAPIType == "machine" {
 			return fmt.Sprintf("%sapi/v4/machine/stop", API_URL)

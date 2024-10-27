@@ -13,9 +13,8 @@
  
 ## Usage
 1. `sudo apt install -y libxcursor-dev libxrandr-dev libxinerama-dev libxi-dev libxxf86vm-dev`
-2. `go install github.com/DOMBUSTERS/HTBUSTER@HEAD`
-3. Create an app token on your HTB profile (any duration you want)
-4. Set the `HTB_TOKEN` environment variable with the value containing your generated token
-5. Run styx
-
--OR- clone this repo and run `go build`
+2. Clone this repo
+3. Run `go build`
+4. Create an app token on your HTB profile (any duration you want)
+5. Set the `HTB_TOKEN` environment variable with the value containing your generated token
+6. Run HTBUSTER
