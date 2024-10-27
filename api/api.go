@@ -139,11 +139,7 @@ func SubmitFlag(flag string, machineId int, machineType string) bool {
 		return false
 	}
 	fmt.Println(response)
-	if strings.Contains(response, "is now owned.") {
-		return true
-	}
-	return false
-
+	return strings.Contains(response, "is now owned.")
 }
 
 type SpawnMachineRequest struct {
